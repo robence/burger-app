@@ -1,17 +1,20 @@
 import React from 'react';
 
-import Counter from '../components/Counter';
-import FoodContainer from '../components/food/FoodContainer';
-import UserContainer from '../components/service-desk/UserContainer';
-import DisplayComponent from '../components/service-desk/DisplayComponent';
+import BurgerLayout from './burger';
 
 export default function Layout() {
+  const style = {
+    width: '100vw',
+    height: '100vh',
+    backgroundColor: 'lightgrey',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  };
+
   return (
-    <div>
-      <UserContainer />
-      <DisplayComponent />
-      <Counter />
-      <FoodContainer />
+    <div style={style}>
+      <BurgerLayout />
     </div>
   );
 }

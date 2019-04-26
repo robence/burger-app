@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { StoreProvider } from './store/useStore';
 import App from './App';
+import './index.css';
 
 function Main() {
   return (
