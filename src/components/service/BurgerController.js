@@ -3,11 +3,19 @@ import React, { useEffect } from 'react';
 import OrderButton from '../burger/OrderButton';
 import { generateItems, randomInterval } from '../../utils/burger';
 import { useStore } from '../../store/useStore';
-import { newBurger, addItem } from '../../store/actions';
+import {
+  newBurger,
+  addItem,
+  helloThere,
+  thereHello,
+  myPleasure,
+  pleasureMine,
+} from '../../store/actions';
 
 export default function BurgerController() {
-  const { dispatch } = useStore();
+  const { state, dispatch } = useStore();
 
+  console.log(state);
   const boundAddItem = (item) => dispatch(addItem(item));
   const boundNewBurger = () => dispatch(newBurger());
 
@@ -19,8 +27,16 @@ export default function BurgerController() {
     burgerItems.forEach((item) => boundAddItem(item));
   };
 
+  const testReducers = () => {
+    dispatch(helloThere());
+    dispatch(thereHello());
+    dispatch(myPleasure());
+    dispatch(pleasureMine());
+  };
+
   useEffect(() => {
-    getBurger();
+    // getBurger();
+    testReducers();
   }, []);
 
   return (
