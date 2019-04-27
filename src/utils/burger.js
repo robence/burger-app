@@ -1,8 +1,23 @@
 const burgerItems = ['Salad', 'Bacon', 'Egg', 'Cheese', 'Meat'];
 
-const getItem = () => {
-  const i = Math.round(Math.random() * (burgerItems.length - 1));
-  return burgerItems[i];
-};
+export function randomInterval(end, start = 0) {
+  return Math.floor(Math.random() * end) + start;
+}
 
-export default getItem;
+export function getItem() {
+  const index = randomInterval(burgerItems.length);
+  return burgerItems[index];
+}
+
+export function generateItems(length) {
+  const items = [];
+  while (items.length < length) {
+    let item = getItem();
+    while (items.includes(item)) {
+      item = getItem();
+    }
+    items.push(item);
+  }
+
+  return items;
+}

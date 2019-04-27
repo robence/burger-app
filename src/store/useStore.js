@@ -16,14 +16,14 @@ const Actions = {
 // the reducer is called whenever a dispatch action is made.
 // the action.type is a string which maps to a function in Actions.
 // We apply the update to existing state, and return a new copy of state.
-const reducer = (state, action) => {
+const rootReducer = (state, action) => {
   const act = Actions[action.type];
   const update = act(state, action.payload);
   return { ...state, ...update };
 };
 
 export const StoreProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(rootReducer, initialState);
 
   return (
     <StoreContext.Provider value={{ state, dispatch }}>

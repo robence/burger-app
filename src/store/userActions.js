@@ -1,10 +1,10 @@
+import { addItem, newBurger } from './reducers';
+
 export const userInitialState = {
   burgerItems: [],
 };
 
 export const userActions = {
-  addItem: ({ burgerItems }, { item }) => {
-    return { burgerItems: [...burgerItems, item] };
-  },
-  newBurger: () => ({ burgerItems: [] }),
+  ADD_ITEM: addItem,
+  NEW_BURGER: newBurger,
 };
