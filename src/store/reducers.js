@@ -1,34 +1,18 @@
-import {
-  HELLO_THERE,
-  THERE_HELLO,
-  MY_PLEASURE,
-  PLEASURE_MINE,
-} from './actions';
+import { ADD_ITEM, REMOVE_ITEM, NEW_BURGER } from './actions';
 
-export const addItem = ({ burgerItems }, { item }) => ({
-  burgerItems: [...burgerItems, item],
-});
-
-export const newBurger = () => ({ burgerItems: [] });
-
-export const reducer1 = (previousState, action) => {
+export const userReducer = (state, action) => {
   switch (action.type) {
-    case HELLO_THERE:
-      return { ...previousState, hello: 'there' };
-    case THERE_HELLO:
-      return { ...previousState, there: 'hello' };
+    case ADD_ITEM:
+      return { burgerItems: [...state.burgerItems, action.payload.item] };
+    case NEW_BURGER:
+      return { burgerItems: [] };
+    case REMOVE_ITEM:
+      return {
+        burgerItems: state.burgerItems.filter(
+          (item) => item !== action.payload.item,
+        ),
+      };
     default:
-      return previousState;
-  }
-};
-
-export const reducer2 = (previousState, action) => {
-  switch (action.type) {
-    case MY_PLEASURE:
-      return { ...previousState, my: 'pleasure' };
-    case PLEASURE_MINE:
-      return { ...previousState, pleasure: 'mine' };
-    default:
-      return previousState;
+      return state;
   }
 };
