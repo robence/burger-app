@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function OrderButton({ onClick }) {
+export default function OrderButton({ title, onClick }) {
   const style = {
     border: '1px solid black',
     borderRadius: '20px',
@@ -16,7 +16,7 @@ export default function OrderButton({ onClick }) {
 
   return (
     <span onClick={onClick} style={style}>
-      Give me a damn burger!
+      {title}
     </span>
   );
 }
