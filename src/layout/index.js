@@ -1,20 +1,23 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import BurgerLayout from './burger';
 
 export default function Layout() {
-  const style = {
-    width: '100vw',
-    height: '100vh',
-    backgroundColor: 'lightgrey',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  };
+  const Div = styled.div`
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: lightgrey;
+    box-sizing: border-box;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  `;
 
   return (
-    <div style={style}>
+    <Div>
       <BurgerLayout />
-    </div>
+    </Div>
   );
 }
