@@ -1,25 +1,24 @@
 import React from 'react';
-
-import BurgerController from '../../components/service/BurgerController';
+import styled from 'styled-components';
+import BurgerControls from '../../components/service/BurgerControls';
 import BurgerList from '../../components/burger/BurgerList';
+import BurgerMenu from '../../components/wrapper/BurgerDisplay';
+import FlexContainer from '../../components/wrapper/FlexColumnCenter';
 
 export default function BurgerLayout() {
-  const style = {
-    minWidth: '300px',
-    minHeight: '350px',
-    width: '95%',
-    height: '95%',
-    backgroundColor: 'white',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    flexDirection: 'column',
-  };
+  const Div = styled.div`
+    width: 100%;
+    height: inherit;
+  `;
 
   return (
-    <div style={style}>
-      <BurgerController />
-      <BurgerList />
-    </div>
+    <Div>
+      <BurgerControls />
+      <BurgerMenu>
+        <FlexContainer>
+          <BurgerList />
+        </FlexContainer>
+      </BurgerMenu>
+    </Div>
   );
 }

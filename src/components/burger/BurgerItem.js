@@ -1,24 +1,23 @@
 import React from 'react';
 
-const BurgerItem = ({ item }) => {
-  const style = {
-    margin: '2px',
-  };
+import styled from 'styled-components';
 
-  const imgStyle = {
-    height: 'auto',
-    width: 'auto',
-    maxWidth: '100px',
-    maxHeight: '100px',
-  };
+export default function BurgerItem({ item }) {
+  const Img = styled.img`
+    width: 100%;
+    max-width: 100px;
+    max-height: 100px;
+    animation: fadeIn 1000ms;
 
-  return (
-    <div style={style}>
-      <img style={imgStyle} src={`${item}.png`} alt="logo" />
-    </div>
-  );
-};
+    @keyframes fadeIn {
+      from {
+        opacity: 0.4;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  `;
 
-// {item}
-
-export default BurgerItem;
+  return <Img src={`${item}.png`} alt="logo" />;
+}

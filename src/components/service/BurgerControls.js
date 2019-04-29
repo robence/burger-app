@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
+import styled from 'styled-components';
 
-import OrderButton from '../burger/OrderButton';
+import OrderButton from './OrderButton';
 import { generateItems, randomInterval } from '../../utils/burger';
 import { useStore } from '../../store/useStore';
 import { newBurger, addItem, removeItem } from '../../store/actions';
@@ -30,12 +31,17 @@ export default function BurgerController() {
     getBurger();
   }, []);
 
+  const Div = styled.div`
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+  `;
+
   return (
-    <div
-      style={{ display: 'flex', justifyContent: 'space-evenly', width: '100%' }}
-    >
+    <Div>
       <OrderButton onClick={getBurger} title="Give me a damn burger!" />
       <OrderButton onClick={removeRandomItem} title="Bite!" />
-    </div>
+    </Div>
   );
 }
