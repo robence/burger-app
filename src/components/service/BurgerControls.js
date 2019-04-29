@@ -40,7 +40,7 @@ export default function BurgerController() {
 
   return (
     <Div>
-      <OrderButton primary onClick={getBurger} title="Give me a damn burger!" />
+      <OrderButton onClick={getBurger} title="Give me a damn burger!" />
       <OrderButton onClick={removeRandomItem} title="Bite!" />
     </Div>
   );

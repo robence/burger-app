@@ -2,9 +2,8 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-const BurgerItem = ({ item }) => {
+export default function BurgerItem({ item }) {
   const Img = styled.img`
-    /* height: 100%; */
     width: 100%;
     max-width: 100px;
     max-height: 100px;
@@ -21,6 +20,4 @@ const BurgerItem = ({ item }) => {
   `;
 
   return <Img src={`${item}.png`} alt="logo" />;
-};
-
-export default BurgerItem;
+}

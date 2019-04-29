@@ -2,17 +2,15 @@ import React from 'react';
 
 import styled, { css } from 'styled-components';
 
-const orderButton = ({ title, onClick }) => {
+export default function OrderButton({ title, onClick }) {
   const Span = styled.span`
-    background: transparent;
     color: grey;
     border: 2px solid grey;
-    margin-top: 10px;
+    margin: 10px;
     border-radius: 20px;
-    padding: 10px;
-    width: 20vw;
-    max-width: 200px;
-    min-width: 180px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 180px;
     display: flex;
     font-weight: 500;
     justify-content: center;
@@ -37,13 +35,9 @@ const orderButton = ({ title, onClick }) => {
       `}
   `;
 
-  const primary = title === 'Bite!';
-
   return (
-    <Span primary={primary} onClick={onClick}>
+    <Span primary={title === 'Bite!'} onClick={onClick}>
       {title}
     </Span>
   );
-};
-
-export default orderButton;
+}
