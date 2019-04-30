@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled, { css } from 'styled-components';
 
-export default function OrderButton({ title, onClick }) {
+export default function ActionButton({ onClick, children, primary }) {
   const Span = styled.span`
     color: grey;
     border: 2px solid grey;
@@ -17,6 +17,7 @@ export default function OrderButton({ title, onClick }) {
     align-items: center;
     cursor: pointer;
     user-select: none;
+    transition: all 0.4s ease;
 
     &: hover {
       color: white;
@@ -36,8 +37,8 @@ export default function OrderButton({ title, onClick }) {
   `;
 
   return (
-    <Span primary={title === 'Bite!'} onClick={onClick}>
-      {title}
+    <Span primary={primary} onClick={onClick}>
+      {children}
     </Span>
   );
 }

@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
-import OrderButton from './OrderButton';
+import ActionButton from './ActionButton';
 import { generateItems, randomInterval } from '../../utils/burger';
 import { useStore } from '../../store/useStore';
 import { newBurger, addItem, removeItem } from '../../store/actions';
 
-export default function BurgerController() {
+export default function ActionController() {
   const { state, dispatch } = useStore();
 
   const boundNewBurger = () => dispatch(newBurger());
@@ -40,8 +40,12 @@ export default function BurgerController() {
 
   return (
     <Div>
-      <OrderButton onClick={getBurger} title="Give me a damn burger!" />
-      <OrderButton onClick={removeRandomItem} title="Bite!" />
+      <ActionButton onClick={getBurger}>
+        {'Give me a damn burger!'}
+      </ActionButton>
+      <ActionButton primary onClick={removeRandomItem}>
+        {'Bite!'}
+      </ActionButton>
     </Div>
   );
 }

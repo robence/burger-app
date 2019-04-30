@@ -5,9 +5,7 @@ import { useStore } from '../../store/useStore';
 export default function BurgerList() {
   const { state } = useStore();
 
-  const getContent = () => {
-    return state.burgerItems.map((x, i) => <BurgerItem item={x} key={i} />);
-  };
+  const getItem = (item, key) => <BurgerItem item={item} key={key} />;
 
-  return getContent();
+  return state.burgerItems.map(getItem);
 }

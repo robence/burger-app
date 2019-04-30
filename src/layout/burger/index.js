@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import BurgerControls from '../../components/service/BurgerControls';
+import ActionContainer from '../../components/action/ActionContainer';
 import BurgerList from '../../components/burger/BurgerList';
-import BurgerMenu from '../../components/wrapper/BurgerDisplay';
-import FlexContainer from '../../components/wrapper/FlexColumnCenter';
+import BurgerContainer from '../../components/wrapper/BurgerContainer';
+import FlexContainer from '../../components/wrapper/FlexContainer';
 
 export default function BurgerLayout() {
   const Div = styled.div`
@@ -13,12 +13,12 @@ export default function BurgerLayout() {
 
   return (
     <Div>
-      <BurgerControls />
-      <BurgerMenu>
+      <ActionContainer />
+      <BurgerContainer>
         <FlexContainer>
           <BurgerList />
         </FlexContainer>
-      </BurgerMenu>
+      </BurgerContainer>
     </Div>
   );
 }
