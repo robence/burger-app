@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-export default function BurgerItem({ item }) {
+export default function BurgerListItem({ item }) {
   const Img = styled.img`
     width: 100%;
     max-width: 100px;

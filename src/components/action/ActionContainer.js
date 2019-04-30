@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import styled from 'styled-components';
 
-import ActionButton from './ActionButton';
+import ActionList from './ActionList';
 import { generateItems, randomInterval } from '../../utils/burger';
 import { useStore } from '../../store/useStore';
 import { newBurger, addItem, removeItem } from '../../store/actions';
@@ -31,21 +30,17 @@ export default function ActionController() {
     getBurger();
   }, []);
 
-  const Div = styled.div`
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    flex-wrap: wrap;
-  `;
+  const items = [
+    {
+      title: 'Give me a damn burger!',
+      onClick: getBurger,
+    },
+    {
+      title: 'Bite!',
+      onClick: removeRandomItem,
+      primary: true,
+    },
+  ];
 
-  return (
-    <Div>
-      <ActionButton onClick={getBurger}>
-        {'Give me a damn burger!'}
-      </ActionButton>
-      <ActionButton primary onClick={removeRandomItem}>
-        {'Bite!'}
-      </ActionButton>
-    </Div>
-  );
+  return <ActionList items={items} />;
 }

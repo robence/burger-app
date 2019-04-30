@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import BurgerLayout from './burger';
-import Card from '../components/wrapper/Card';
+import BurgerLayout from './BurgerLayout';
 
 export default function LayoutComponent() {
-  const Layout = styled.div`
+  const Div = styled.div`
     min-width: 100vw;
     min-height: 100vh;
     background-color: lightgrey;
@@ -16,10 +15,8 @@ export default function LayoutComponent() {
   `;
 
   return (
-    <Layout>
-      <Card>
-        <BurgerLayout />
-      </Card>
-    </Layout>
+    <Div>
+      <BurgerLayout />
+    </Div>
   );
 }

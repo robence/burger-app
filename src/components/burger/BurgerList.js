@@ -1,11 +1,8 @@
 import React from 'react';
-import BurgerItem from './BurgerItem';
-import { useStore } from '../../store/useStore';
+import BurgerListItem from './BurgerListItem';
 
-export default function BurgerList() {
-  const { state } = useStore();
+export default function BurgerList({ burgerItems }) {
+  const getItem = (item, key) => <BurgerListItem item={item} key={key} />;
 
-  const getItem = (item, key) => <BurgerItem item={item} key={key} />;
-
-  return state.burgerItems.map(getItem);
+  return burgerItems.map(getItem);
 }
