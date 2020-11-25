@@ -1,15 +1,27 @@
 {
   "files": {
-    "main.css": "/burger-app/static/css/main.ceee8cfb.chunk.css",
-    "main.js": "/burger-app/static/js/main.eb9e1058.chunk.js",
-    "main.js.map": "/burger-app/static/js/main.eb9e1058.chunk.js.map",
-    "runtime~main.js": "/burger-app/static/js/runtime~main.20ac298b.js",
-    "runtime~main.js.map": "/burger-app/static/js/runtime~main.20ac298b.js.map",
-    "static/js/2.0196cae2.chunk.js": "/burger-app/static/js/2.0196cae2.chunk.js",
-    "static/js/2.0196cae2.chunk.js.map": "/burger-app/static/js/2.0196cae2.chunk.js.map",
+    "main.css": "/burger-app/static/css/main.70f5ec54.chunk.css",
+    "main.js": "/burger-app/static/js/main.b66e17dc.chunk.js",
+    "main.js.map": "/burger-app/static/js/main.b66e17dc.chunk.js.map",
+    "runtime-main.js": "/burger-app/static/js/runtime-main.262463ce.js",
+    "runtime-main.js.map": "/burger-app/static/js/runtime-main.262463ce.js.map",
+    "static/js/2.7ff6b409.chunk.js": "/burger-app/static/js/2.7ff6b409.chunk.js",
+    "static/js/2.7ff6b409.chunk.js.map": "/burger-app/static/js/2.7ff6b409.chunk.js.map",
     "index.html": "/burger-app/index.html",
-    "precache-manifest.cbabd18afbcfd7681d26d4be5ca889aa.js": "/burger-app/precache-manifest.cbabd18afbcfd7681d26d4be5ca889aa.js",
-    "service-worker.js": "/burger-app/service-worker.js",
-    "static/css/main.ceee8cfb.chunk.css.map": "/burger-app/static/css/main.ceee8cfb.chunk.css.map"
-  }
+    "static/css/main.70f5ec54.chunk.css.map": "/burger-app/static/css/main.70f5ec54.chunk.css.map",
+    "static/js/2.7ff6b409.chunk.js.LICENSE.txt": "/burger-app/static/js/2.7ff6b409.chunk.js.LICENSE.txt",
+    "static/media/Bacon.40bdce07.png": "/burger-app/static/media/Bacon.40bdce07.png",
+    "static/media/Bottom.e81bb7fd.png": "/burger-app/static/media/Bottom.e81bb7fd.png",
+    "static/media/Cheese.17904fbd.png": "/burger-app/static/media/Cheese.17904fbd.png",
+    "static/media/Egg.baf90f18.png": "/burger-app/static/media/Egg.baf90f18.png",
+    "static/media/Meat.401c1a2f.png": "/burger-app/static/media/Meat.401c1a2f.png",
+    "static/media/Salad.d18e491b.png": "/burger-app/static/media/Salad.d18e491b.png",
+    "static/media/Top.1b84787c.png": "/burger-app/static/media/Top.1b84787c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.262463ce.js",
+    "static/js/2.7ff6b409.chunk.js",
+    "static/css/main.70f5ec54.chunk.css",
+    "static/js/main.b66e17dc.chunk.js"
+  ]
 }
