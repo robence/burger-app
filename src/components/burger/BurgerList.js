@@ -6,7 +6,9 @@ export default function BurgerList() {
   const { state } = useStore();
 
   const getContent = () => {
-    return state.burgerItems.map((x, i) => <BurgerItem item={x} key={i} />);
+    return state.burgerItems.map((x) => (
+      <BurgerItem item={x} key={`${x}-${Math.random().toString()}`} />
+    ));
   };
 
   return getContent();
